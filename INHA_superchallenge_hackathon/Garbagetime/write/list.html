@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공동구매 게시판</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #EFE7E3">
+    <div class="wrap">
+        <div class="header">
+            <ul class="site_name">
+                <li>
+                    <a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/index.html">
+                        <img class="logo1" src="main_logo.png" />
+                    </a>
+                </li>
+                <li>
+                    <a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/index.html">
+                        <img class="logo" src="G_logo.png" />
+                    </a>
+                </li>
+
+            </ul>
+            <ul class="nav">
+                <li><a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/info.html">About</a></li>
+                <li><a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/index.html">Map</a></li>
+                <li><a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/LOGIN.HTML">Login</a></li>
+                <li><a href="#">My page</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="board_wrap">
+        <div class="board_title">
+            <strong>공동구매 게시판</strong>
+            <p>원하는 품목의 공구 물품을 누구나 등록할 수 있습니다. 공구 구매처를 꼭 남겨주세요.</p>
+        </div>
+        <div class="search_box">
+            <form action="/page/board/search_result.php" method="get">
+              <select name="catgo">
+                <option value="title">제목</option>
+                <option value="name">글쓴이</option>
+              </select>
+              <input type="text" name="search" size="40" required="required" /> <button>검색</button>
+            </form>
+        </div>
+        <div class="board_list_wrap">
+            <div class="board_list">
+                <div class="top">
+                    <div class="num">번호</div>
+                    <div class="title">제목</div>
+                    <div class="writer">글쓴이</div>
+                    <div class="date">작성일</div>
+                </div>
+                <div>
+                  <div class="num">5</div>
+                  <div class="title"><a href="view.html">감자 10kg 같이 공구해요 (1/20)</a></div>
+                  <div class="writer">inha1000</div>
+                  <div class="date">2023.01.30</div>
+                </div>
+                <div>
+                    <div class="num">4</div>
+                    <div class="title"><a href="view.html">고구마 15kg 같이 공구해요 (1/20)</a></div>
+                    <div class="writer">inha1001</div>
+                    <div class="date">2023.01.30</div>
+                </div>
+                <div>
+                    <div class="num">3</div>
+                    <div class="title"><a href="view.html">귤 10kg 같이 공구해요 (1/10) </a></div>
+                    <div class="writer">inha0028</div>
+                    <div class="date">2023.01.29</div>
+                </div>
+                <div>
+                    <div class="num">2</div>
+                    <div class="title"><a href="view.html">사과 20kg 같이 공구해요 (1/20) </a></div>
+                    <div class="writer">inha0143</div>
+                    <div class="date">2023.01.29</div>
+                </div>
+                <div>
+                    <div class="num">1</div>
+                    <div class="title"><a href="view.html">돼지감자 10kg 같이 공구해요 (1/15) </a></div>
+                    <div class="writer">inha2876</div>
+                    <div class="date">2023.01.29</div>
+                </div>
+            </div>
+            <div class="board_page">
+                <a href="#" class="bt first"><<</a>
+                <a href="#" class="bt prev"><</a>
+                <a href="" class="num on">1</a>
+                <a href="" class="num">2</a>
+                <a href="" class="num">3</a>
+                <a href="" class="num">4</a>
+                <a href="" class="num">5</a>
+                <a href="#" class="bt next">></a>
+                <a href="#" class="bt last">>></a>
+            </div>
+            <div class="bt_wrap">
+                <a href="write.html" class ="on">등록</a>
+                <a href="#"> 상품 보러가기</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

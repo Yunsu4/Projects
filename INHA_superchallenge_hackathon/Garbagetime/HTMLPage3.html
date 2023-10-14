@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <ul class="site_name">
+                <li><a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/first_page.html">가비지타임</a></li>
+            </ul>
+            <ul class="nav">
+                <li><a href="#">About</a></li>
+                <li><a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/first_page.html">Map</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">My page</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="intro_bg">
+        <div id="map" style="width:100%;height:100vh;"></div>
+        <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=61b7d76b12c136827a62dacea082e327"></script>
+        <script>
+            var container = document.getElementById('map');
+            var options = {
+                center: new kakao.maps.LatLng(37.450934, 126.656874),
+                level: 3
+            };
+
+            var map = new kakao.maps.Map(container, options);
+        </script>
+        <div class="container">
+            <button class="btn-1">친환경 가게</button>
+            <button class="btn-2">마감 할인</button>
+
+        </div>
+
+        <div class="cafe"></div>
+
+        <div class="community">
+            <button class="f_btn">공동 구매</button>
+        </div>
+
+
+    </div>
+
+
+   
+</body>
+</html>
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="login.css" />
+    <title>로그인</title>
+  </head>
+  <style>
+    body{
+        background-image: url("background.png");
+        width:100%;
+        background-size: cover;
+    }
+  </style>
+  <body>
+      <div class="wrap">
+          <div class="header">
+              <ul class="site_name">
+                  <li>
+                      <a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/index.html">
+                          <img class="logo1" src="main_logo.png" />
+                      </a>
+                  </li>
+                  <li>
+                      <a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/index.html">
+                          <img class="logo" src="G_logo.png" />
+                      </a>
+                  </li>
+
+              </ul>
+              <ul class="nav">
+                  <li><a href="#">About</a></li>
+                  <li><a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/index.html">Map</a></li>
+                  <li><a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/LOGIN.HTML">Login</a></li>
+                  <li><a href="#">My page</a></li>
+              </ul>
+          </div>
+      </div>
+
+      <section class="login">
+          <h2>로그인</h2>
+          <ul>
+              <form id="login">
+              <li>
+                  <input required
+                         id="userid"
+                         type="text"
+                         placeholder="아이디"
+                         name="userid" />
+              </li>
+              <li>
+                  <input required
+                         id="userpw"
+                         type="password"
+                         placeholder="비밀번호"
+                         minlength="10"
+                         name="userpw" />
+              </li>
+              <li>
+                  <input type="checkbox" id="chk_id" name="chk_id" /><label for="chk_id">아이디저장</label>
+              </li>
+              <li><input type="submit" value="로그인" /></li>
+              </form>
+          </ul>
+          <div>
+              <ul>
+                  <li><a href="JOIN.HTML">회원가입</a></li>
+                  <li><a href="">아이디 찾기</a></li>
+                  <li><a href="">비밀번호 찾기</a></li>
+              </ul>
+          </div>
+      </section>
+  </body>
+</html>

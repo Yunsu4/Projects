@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="first.css">
+    <title>Garbage Time</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <ul class="site_name">
+                <li>
+                    <a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/index.html">
+                        <img class="logo1" src="main_logo.png" />
+                    </a>
+                </li>
+                <li>
+                    <a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/index.html">
+                        <img class="logo" src="G_logo.png" />
+                    </a>
+                </li>
+                
+                    
+
+            </ul>
+            <ul class="nav">
+                <li><a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/info.html">About</a></li>
+                <li><a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/index.html">Map</a></li>
+                <li><a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/LOGIN.HTML">Login</a></li>
+                <li><a href="#">My page</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="intro_bg">
+        <div id="map" style="width:100%;height:100vh;"></div>
+        <div class="container">
+            <button id="coffeeMenu" onclick="changeMarker('coffee')">녹색 할인</button>
+            <button id="storeMenu" onclick="changeMarker('store')">마감 할인</button>
+
+        </div>
+
+
+
+        <div class="community">
+            <button class="f_btn" onClick="location.href='file:///C:/Users/USER/Desktop/web_study/Project1/Project1/write/list.html'">공동 구매</button>
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=61b7d76b12c136827a62dacea082e327"></script>
+    <script>
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(37.450934, 126.656874),
+            level: 3
+        };
+
+        var map = new kakao.maps.Map(container, options);
+
+
+
+
+
+        
+
+
+
+
+
+
+        
+
+
+
+        // 커피숍 마커가 표시될 좌표 배열입니다
+        var coffeePositions = [
+            new kakao.maps.LatLng(37.451670, 126.655353),
+            new kakao.maps.LatLng(37.452513, 126.660095)
+            
+
+            //new kakao.maps.LatLng(37.497625593121384, 127.02935713582038),
+            //new kakao.maps.LatLng(37.49646391248451, 127.02675574250912),
+            //new kakao.maps.LatLng(37.49629291770947, 127.02587362608637),
+            //new kakao.maps.LatLng(37.49754540521486, 127.02546694890695)
+        ];
+
+        // 편의점 마커가 표시될 좌표 배열입니다
+        var storePositions = [
+            new kakao.maps.LatLng(37.451164, 126.659435),
+            new kakao.maps.LatLng(37.450943, 126.653310),
+            new kakao.maps.LatLng(37.449298, 126.655815),
+            new kakao.maps.LatLng(37.450212, 126.657488)
+            //new kakao.maps.LatLng(37.49640098874988, 127.02609983175294),
+            //new kakao.maps.LatLng(37.49932849491523, 127.02935780247945),
+            //new kakao.maps.LatLng(37.49996818951873, 127.02943721562295)
+        ];
+
+
+
+
+
+
+
+        //인포윈도우 변수 선언
+
+        var iwContent = '<div style="padding:10px; width:220px;">텀블러를 사용하면 100원 할인</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+            iwPosition = new kakao.maps.LatLng(37.451670, 126.655353); //인포윈도우 표시 위치입니다
+
+        // 인포윈도우를 생성합니다
+        var infowindow = new kakao.maps.InfoWindow({
+            position: iwPosition,
+            content: iwContent
+        });
+
+    
+
+        var iwContent1 = '<div style="padding:10px;">포장용기 가져오면 1000원 할인</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+            iwPosition1 = new kakao.maps.LatLng(37.451164, 126.659435); //인포윈도우 표시 위치입니다
+
+        // 인포윈도우를 생성합니다
+        var infowindow1 = new kakao.maps.InfoWindow({
+            position: iwPosition1,
+            content: iwContent1
+        });
+
+
+        var iwContent2 = '<div style="padding:10px; color: red;  width:200px">' +
+            '<a href="https://www.naver.com/" target="_blank">' +
+            '<span style="color:red;">디저트 할인  19:00 ~20:00</span>' + '</a>' + '</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+            iwPosition2 = new kakao.maps.LatLng(37.452513, 126.660095); //인포윈도우 표시 위치입니다
+
+        // 인포윈도우를 생성합니다
+        var infowindow2= new kakao.maps.InfoWindow({
+            position: iwPosition2,
+            content: iwContent2
+        });
+
+        var iwContent3 = '<div style="padding:10px; color:red; width:230px">' +
+            '<a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/inhamara/%EA%B3%A0%EA%B0%9D%EC%9A%A9_%EC%99%84%EC%84%B1/noinhamaratang.html" target="_blank">' +
+            '<span style="color:red;">마라탕 재료 판매 19:00 ~21:00</span>' + '</a>' + ' </div > '; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+            iwPosition3 = new kakao.maps.LatLng(37.450943, 126.653310); //인포윈도우 표시 위치입니다
+
+        // 인포윈도우를 생성합니다
+        var infowindow3 = new kakao.maps.InfoWindow({
+            position: iwPosition3,
+            content: iwContent3
+        });
+
+
+        var iwContent4 = '<div style="padding:10px;">유리병 1개 가져오면 300원 할인</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+            iwPosition4 = new kakao.maps.LatLng(37.449298, 126.655815); //인포윈도우 표시 위치입니다
+
+        // 인포윈도우를 생성합니다
+        var infowindow4 = new kakao.maps.InfoWindow({
+            position: iwPosition4,
+            content: iwContent4
+        });
+
+
+
+        var iwContent5 = '<div style="padding:10px; color: red; width:200px">' +
+            '<a href="file:///C:/Users/USER/Desktop/web_study/Project1/Project1/inhamara/%EA%B3%A0%EA%B0%9D%EC%9A%A9_%EC%99%84%EC%84%B1/imart.html" target="_blank">' +
+            '<span style="color:red;">식자재 할인 22:00~23:00</span>' + '</a>' + '</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+            iwPosition5 = new kakao.maps.LatLng(37.450212, 126.657488); //인포윈도우 표시 위치입니다
+
+        // 인포윈도우를 생성합니다
+        var infowindow5 = new kakao.maps.InfoWindow({
+            position: iwPosition5,
+            content: iwContent5
+        });
+
+
+
+
+       
+
+        var markerImageSrc1 = 'cafe.png';  // 마커이미지의 주소입니다. 스프라이트 이미지 입니다
+        var markerImageSrc2 = 'market.png';
+
+        coffeeMarkers = [], // 커피숍 마커 객체를 가지고 있을 배열입니다
+            storeMarkers = []; // 편의점 마커 객체를 가지고 있을 배열입니다
+       
+
+
+        createCoffeeMarkers(); // 커피숍 마커를 생성하고 커피숍 마커 배열에 추가합니다
+        createStoreMarkers(); // 편의점 마커를 생성하고 편의점 마커 배열에 추가합니다
+
+        changeMarker('coffee'); // 지도에 커피숍 마커가 보이도록 설정합니다    
+
+
+        // 마커이미지의 주소와, 크기, 옵션으로 마커 이미지를 생성하여 리턴하는 함수입니다
+        function createMarkerImage(src, size, options) {
+            var markerImage = new kakao.maps.MarkerImage(src, size, options);
+            return markerImage;
+        }
+        var marker = "";
+
+        // 좌표와 마커이미지를 받아 마커를 생성하여 리턴하는 함수입니다
+        function createMarker(position, image) {
+            marker = new kakao.maps.Marker({
+                position: position,
+                image: image
+            });
+
+            return marker;
+        }
+
+        // 커피숍 마커를 생성하고 커피숍 마커 배열에 추가하는 함수입니다
+        function createCoffeeMarkers() {
+
+           
+               var imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+                    imageOptions = { offset: new kakao.maps.Point(27, 69) };
+         
+
+            // 마커이미지와 마커를 생성합니다
+            var markerImage = createMarkerImage(markerImageSrc1, imageSize, imageOptions),
+                marker = createMarker(coffeePositions[0], markerImage);
+
+            var markerImage1 = createMarkerImage(markerImageSrc2, imageSize, imageOptions),
+                marker1 = createMarker(storePositions[0], markerImage1);
+
+            var markerImage4 = createMarkerImage(markerImageSrc2, imageSize, imageOptions),
+                marker4 = createMarker(storePositions[2], markerImage4);
+
+
+
+
+                // 생성된 마커를 커피숍 마커 배열에 추가합니다
+            coffeeMarkers.push(marker);
+            storeMarkers.push(marker1);
+            storeMarkers.push(marker4);
+
+            infowindow.open(map, marker);
+            infowindow1.open(map, marker1);
+            infowindow4.open(map, marker4);
+            
+        }
+
+        // 커피숍 마커들의 지도 표시 여부를 설정하는 함수입니다
+        function setCoffeeMarkers(i, map) {
+                coffeeMarkers[i].setMap(map);
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+        //식당 마커를 생성하고 편의점 마커 배열에 추가하는 함수입니다
+        function createStoreMarkers() {
+            
+
+                var imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+                    imageOptions = { offset: new kakao.maps.Point(27, 69) };
+
+
+                // 마커이미지와 마커를 생성합니다
+                var markerImage = createMarkerImage(markerImageSrc1, imageSize, imageOptions),
+                    marker = createMarker(coffeePositions[1], markerImage);
+
+
+                var markerImage1 = createMarkerImage(markerImageSrc2, imageSize, imageOptions),
+                marker1 = createMarker(storePositions[1], markerImage1);
+
+                var markerImage5 = createMarkerImage(markerImageSrc2, imageSize, imageOptions),
+                 marker5 = createMarker(storePositions[3], markerImage5);
+
+                // 생성된 마커를 커피숍 마커 배열에 추가합니다
+                coffeeMarkers.push(marker);
+            storeMarkers.push(marker1);
+            storeMarkers.push(marker5);
+
+            infowindow2.open(map, marker);
+            infowindow3.open(map, marker1);
+            infowindow5.open(map, marker5);
+            
+        }
+
+
+
+
+        // 편의점 마커들의 지도 표시 여부를 설정하는 함수입니다
+        function setStoreMarkers(i,map) {
+                storeMarkers[i].setMap(map);
+            
+        }
+
+ 
+
+
+
+        // 카테고리를 클릭했을 때 type에 따라 카테고리의 스타일과 지도에 표시되는 마커를 변경합니다
+        function changeMarker(type) {
+
+            var coffeeMenu = document.getElementById('coffeeMenu');
+            var storeMenu = document.getElementById('storeMenu');
+
+            // 커피숍 카테고리가 클릭됐을 때
+            if (type === 'coffee') {
+                createCoffeeMarkers(); // 커피숍 마커를 생성하고 커피숍 마커 배열에 추가합니다
+                createStoreMarkers();
+
+
+                // 커피숍 카테고리를 선택된 스타일로 변경하고
+                coffeeMenu.className = 'menu_selected';
+
+                // 편의점과 주차장 카테고리는 선택되지 않은 스타일로 바꿉니다
+                storeMenu.className = '';
+
+                // 커피숍 마커들만 지도에 표시하도록 설정합니다
+                setCoffeeMarkers(0,map);
+                setStoreMarkers(0, map);
+                setCoffeeMarkers(1, null);
+                setStoreMarkers(1, map);
+                infowindow3.close();
+                infowindow2.close();
+                setStoreMarkers(2, null);
+                setStoreMarkers(3, null);
+                infowindow5.close();
+
+                
+            
+               
+
+            } else if (type === 'store') { // 편의점 카테고리가 클릭됐을 때
+                createCoffeeMarkers(); // 커피숍 마커를 생성하고 커피숍 마커 배열에 추가합니다
+                createStoreMarkers();
+
+                // 편의점 카테고리를 선택된 스타일로 변경하고
+                coffeeMenu.className = '';
+                storeMenu.className = 'menu_selected';
+
+                // 편의점 마커들만 지도에 표시하도록 설정합니다
+                setCoffeeMarkers(1, map);
+                setStoreMarkers(1, null);
+                //setCoffeeMarkers(1, null);
+
+                setCoffeeMarkers(0, null);
+                setStoreMarkers(0, null);
+                setStoreMarkers(2, map);
+                infowindow.close();
+                infowindow1.close();
+                infowindow4.close();
+
+                setStoreMarkers(3, map);
+
+
+
+            }
+
+        }
+
+
+
+
+        
+    </script>
+
+</body>
+</html>
+

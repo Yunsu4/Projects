@@ -1,0 +1,71 @@
+@import url(style.css);
+@import url(media.css);
+
+@font-face {
+    font-family: 'KOTRA_BOLD-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'KOTRA_BOLD-Bold';
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+}
+
+
+
+.header {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    height: 50px;
+}
+
+.site_name {
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+    height: 50px;
+    background: lightslategrey;
+}
+
+.logo1 {
+    margin-right: -10px;
+    margin-left: 10px;
+    width: 45px;
+    height: 45px;
+}
+
+.logo {
+    margin-top: -35px;
+    width: 200px;
+    height: 150px;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end; /*flex하고 오른쪽으로 붙이기*/
+    line-height: 50px;
+    width: 1280px; /*알아서 남은 영역을 나눠줌 980*/
+    background: lightslategrey;
+}
+
+    .nav > li {
+        margin-left: 84px;
+    }
+
+        .nav > li > a {
+            color: #fff;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size:15px;
+        }
+
+        .nav > li:last-child {
+            margin-right: 84px;
+        }

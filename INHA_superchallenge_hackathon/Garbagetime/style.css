@@ -1,0 +1,179 @@
+* {
+    font-family: 'KOTRA_BOLD-Bold';
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+ }
+
+body{
+    background-color: #EFE7E3;
+}
+
+.frame{
+    margin: 30px 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*navigator*/
+
+@font-face {
+    font-family: 'KOTRA_BOLD-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+ }
+ 
+ .header{
+    display:flex;
+    width:100%;
+    margin:auto;
+    height: 50px;
+ }
+ 
+ .site_name {
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+    height: 50px;
+    background: lightslategrey;
+ }
+ 
+    .logo1 {
+       margin-right:-10px;
+       margin-left:10px;
+       width:45px;
+       height:45px;
+    }
+ 
+    .logo{
+       margin-top:-35px;
+       width:200px;
+       height:150px;
+    }
+ 
+ .nav{
+    display:flex;
+    justify-content:flex-end; /*flex하고 오른쪽으로 붙이기*/
+    line-height:50px;
+    width: 1280px; /*알아서 남은 영역을 나눠줌 980*/
+    background:lightslategrey;
+ }
+ 
+ .nav > li{
+    margin-left:84px;
+ 
+ 
+ }
+ 
+    .nav > li > a {
+       color: #fff;
+       font-family: 'Noto Sans KR', sans-serif;
+    }
+ 
+    .nav > li:last-child {
+       margin-right: 84px;
+    }
+
+/* INFO Section*/
+
+
+/*profile-section*/
+
+.profile-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin: 100px 100px;
+}
+
+
+#profile-picture{
+    width: 400px;
+    margin-right: 60px;
+}
+
+.introduction>h2{
+    margin: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+}
+
+.introduction>p{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+
+    margin-bottom: 40px;
+}
+
+#keyword{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    font-style: italic;
+
+    line-height: 20px;
+}
+
+
+/*value section*/
+
+.value-menu{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    margin: 30px 100px;
+}
+
+.value-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    margin: 100px 150px;
+    margin-top: 20px;
+}
+
+.value{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+    align-items: center;
+
+}
+
+
+.value-icon{
+    width: cover;
+    height: 100px;
+
+    border: 2px solid #C2B4AB;
+    border-radius: 100px;
+    padding: 0px;
+}
+
+.value-intro{
+    margin-left: 30px;
+}
+
+
+.value-name{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.value-exp{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+
+    margin: 0px;
+}

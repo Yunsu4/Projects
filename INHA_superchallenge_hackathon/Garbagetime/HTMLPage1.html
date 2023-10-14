@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+
+
+
+
+
+
+<!--<html lang="ko">
+<head></head>
+<body>
+    <style>
+       /* .blockTag{
+            background-color: aquamarine;
+        }
+        .blockTag > div{
+            background-color: tomato;
+            border:1px solid black;
+        }
+
+        .inlineTag span{
+            background: skyblue;
+            border:1px solid black;
+        }*/
+
+       li{
+           list-style:none;
+       }
+    </style>
+    <h1>제목</h1>
+    <h2>제목</h2>
+    <h3>제목</h3>
+
+
+    <ul>
+        <li>목록 1</li>
+        <li>목록 2</li>
+        <li>목록 3</li>
+    </ul>-->
+<!--<div class="blockTag">
+    <div>block 1</div>
+    <div>block 2</div>
+    <div>block 3</div>
+</div>
+
+<div class="inlineTag">
+    <span>inline 1</span>
+    <span>inline 2</span>
+    <span>inline 3</span>
+</div>-->
+<!--</body>
+</html>-->
+<!--버튼만들기!
+
+ <html lang="ko">
+<head></head>
+<body>
+    <style>
+        li {
+            list-style: none;
+        }
+        .colorBtn{
+            width:100px;
+            height:36px;
+            background-color:darkseagreen;
+            color: white;
+            text-align:center; /*정렬*/
+            line-height:36px; /*테두리 크기*/
+            cursor:pointer;/*마우스모양 커서로 바뀌게하기*/
+            border-radius:3px;/*테둘 둥글게*/
+        }
+    </style>
+
+    <form>
+        <ul>
+            <li><input type="text"></li>
+            <li><input type="password"></li>
+            <li>
+                <label><input type="radio" name="fruit" id="orange">오렌지</label>
+                <label><input type="radio" name="fruit" id="apple">사과</label>
+            </li>
+
+
+            <li>
+                <label><input type="checkbox" name="fruit" id="orange">오렌지</label>
+                <label><input type="checkbox" name="fruit " id="apple">사과</label>
+            </li>
+
+            <li>
+                <input type="button" value="버튼입니다">
+            </li>
+
+            <li>
+                <div class="colorBtn">버튼입니다</div>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>-->
+<!--<html lang="ko">
+<head></head>
+<body>
+    <style>
+        div{
+            background: pink;
+            padding:10px;
+            margin-left:50px;
+            margin-top:100px;
+        }
+
+        div >span:first-child{
+            background: red;
+            padding-top: 20px;
+
+        }
+        div > span{
+            background-color:aquamarine;
+            padding:10px;/*배경 키우기*/
+            margin: 40px;/*span끼리 떨어뜨리기*/
+
+        }
+    </style>-->
+<!--<a href="https://www.naver.com/">네이버 바로가기</a>
+<img src="1.jpg">-->
+<!--<div>
+        <span>수아</span>
+        <span>디자인</span>
+
+    </div>
+</body>
+</html>-->
+<
+<!--html lang="ko">
+<head></head>
+<body>
+    <style>
+        * {
+            border-collapse: collapse;
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+            color:black;
+            list-style: none;
+
+         }
+
+        table {
+            border: 1px solid black;
+        }
+
+            table > thead > tr > th { /* table th  라고 써도됨*/
+                border: 1px solid gray;
+            }
+
+            table td {
+                border: 1px solid gray;
+                background: pink;
+            }
+    </style>
+
+    <a href="https://www.naver.com/">네이버 바로가기</a>
+
+    <table>
+        <thead>
+            <tr>-->
+<!--가로줄열기-->
+<!--<th>이름</th>
+                <th>성별</th>
+                <th>나이</th>
+                <th>키</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>김타모</td>
+                <td>여성</td>
+                <td>29</td>
+                <td>160</td>
+            </tr>
+            <tr>
+                <td>누룽지</td>
+                <td>남성</td>
+                <td>23</td>
+                <td>120</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>-->
+
+
+
+
+
+
+<!--<html lang="ko">
+<head>
+</head>
+<body>
+    <style>
+        * {
+            border-collapse: collapse;
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+            color: black;
+            list-style: none;
+        }
+        .blackPosition{
+            width:100%;
+            height:300px;
+            background: gray;
+        }
+        .relativePosition {
+            width: 100%;
+            height: 300px;
+            background: pink;
+        }
+
+        .relativePosition > div{
+            padding:50px;
+            background: hotpink;
+            margin-top:10px;
+        }
+
+        .relativePosition > div:first-child{
+            position:relative;
+            top:-100px;
+        }
+        .absolutePosition {
+            width: 100%;
+            height: 200px;
+            background: blue;
+        }
+
+        .absolutePosition >div{
+            position:absolute;
+            right:0px;
+            bottom:0px;
+            width:400px;
+            height: 100px;
+            background: skyblue;
+        }
+
+        .fixedPosition {
+            width: 100%;
+            height: 400px;
+            background: orange;
+        }
+
+            .fixedPosition > div {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                height: 100px;
+                background: green;
+            }
+    </style>
+
+    <div class="blackPosition">
+        <div>blank</div>
+    </div>
+    <div class="relativePosition">
+        <div>relative</div>
+        <div>relative</div>
+
+    </div>
+    <div class="absolutePosition">
+        <div>absolute</div>
+    </div>
+    <div class="fixedPosition">
+        <div>fixed</div>
+    </div>
+    </body>
+</html>-->
+
+
+
+
+
+
+
+
+<html lang="ko">
+<head>
+</head>
+<body>
+    <style>
+        * {
+            border-collapse: collapse;
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+            color: black;
+            list-style: none;
+        }
+
+        div > sapn {
+            background: pink;
+        }
+
+        div > div {
+            background: orange;
+            border: 1px solid white;
+        }
+    </style>
+
+    <div>
+        <span>span</span>
+        <span>span</span>
+    </div>
+
+    <div>
+        <div>div</div>
+        <div>div</div>
+        <div>div</div>
+    </div>
+</body>
+</html>
