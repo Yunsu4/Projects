@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity_my"
+    android:orientation="vertical"
+    android:background="@drawable/backg">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/menu_4_1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="22.55dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/menu" />
+
+        <TextView
+            android:layout_width="313dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/dnfbitbitttf"
+            android:gravity="center"
+            android:text="응급상세정보"
+            android:textColor="#354F4E"
+            android:textSize="20dp"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:id="@+id/settings_6_"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="22.55dp"
+            android:background="@drawable/settings"
+            android:clipToOutline="true" />
+    </LinearLayout>
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="#c8c8c8"
+        android:padding="1dp"
+        android:stretchColumns="*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#E2E2E2"
+                android:gravity="center"
+                android:padding="3dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/dnfbitbitttf"
+                android:text="날짜" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#E2E2E2"
+                android:gravity="center"
+                android:padding="3dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/dnfbitbitttf"
+                android:text="시간" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#E2E2E2"
+                android:gravity="center"
+                android:padding="3dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/dnfbitbitttf"
+                android:text="위치" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="2023-9-10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="19:20:17" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="침실" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="2023-9-10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="19:21:02" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="침실" />
+        </TableRow>
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="" />
+        </TableRow>
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="" />
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:id="@+id/ghost_tab_1"
+        android:layout_width="154.5dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/_tab_item4"
+        android:clipToOutline="true"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toStartOf="@+id/ghost_tab_2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/ghost_tab_2"
+        android:layout_width="154.5dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="51dp"
+        android:background="@drawable/_tab_item3"
+        android:clipToOutline="true"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ghost_tab_1" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/mobile_1_0_"
+                android:layout_width="360dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="20dp"
+                android:background="#00FFFFFF" />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

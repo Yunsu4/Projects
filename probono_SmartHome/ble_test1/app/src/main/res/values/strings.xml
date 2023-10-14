@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ble_test1</string>
+    <string name="send">Send</string>
+    <string name="receive">Receive:</string>
+    <string name="enter_send_data">Enter send data</string>
+    <string name="connect_to_hc_06">connect to HC-06</string>
+    <string name="linked_bluetooth_devices">Linked Bluetooth devices:</string>
+    <string name="search_linked_bluetooth_devices">Search linked Bluetooth devices</string>
+    <string name="send_data">Send Data</string>
+</resources>
